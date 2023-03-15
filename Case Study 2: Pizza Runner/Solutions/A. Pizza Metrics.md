@@ -1,6 +1,6 @@
 # 🍕 Pizza Metrics
 ## [Solution](#solution) 🗒️
-<!--Solution-->
+
 ### 1. How many pizzas were ordered?
 ````sql
 SELECT          count(*)as total_pizza_ordered
