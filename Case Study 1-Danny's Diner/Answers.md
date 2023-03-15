@@ -1,6 +1,6 @@
 # 🥢 🍜 Danny's Diner SQL Challenge
 
-## Answers
+## Solution
 * Tool used: PostgreSQL
 * Functions Used: 
   * Aggregate Functions- SUM,COUNT
