@@ -23,7 +23,7 @@ Here, you can find solutions for the case studies in **[8Weeks SQL Challenge](ht
 
 <img src="https://user-images.githubusercontent.com/81607668/127271856-3c0d5b4a-baab-472c-9e24-3c1e3c3359b2.png" alt="Image" width="500" height="520">
 
-[Here](https://8weeksqlchallenge.com/case-study-2/) is the **case study** information and here is the solution.
+[Here](https://8weeksqlchallenge.com/case-study-2/) is the **case study** information and [here](https://github.com/nancyshrestha04/8Weeks-SQL-Challenge/tree/main/Case%20Study%202:%20Pizza%20Runner) is the **solution**.
 
 ***
 
