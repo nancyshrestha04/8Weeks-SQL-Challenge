@@ -5,29 +5,32 @@ Here, you can find solutions for the case studies in **[8Weeks SQL Challenge](ht
 ## :bucket: Table of Contents
 - [Case Study 1: Danny's Diner](#case-study-1-dannys-diner)
 - [Case Study 2: Pizza Runner](#case-study-2-pizza-runner)
-- [Case Study 3: Foodie-Fi](#case-study-3-foodie-fi)
-- [Case Study 4: Data Bank](#case-study-4-data-bank)
-- [Case Study 5: Data Mart](#case-study-5-data-mart)
-- [Case Study 6: Clique Bait](#case-study-6-clique-bait)
-- [Case Study 8: Fresh Segments](#case-study-8-fresh-segments)
+<!--[Case Study 3: Foodie-Fi](#case-study-3-foodie-fi) -->
+<!-- [Case Study 4: Data Bank](#case-study-4-data-bank) -->
+<!-- [Case Study 5: Data Mart](#case-study-5-data-mart) -->
+<!-- [Case Study 6: Clique Bait](#case-study-6-clique-bait) -->
+<!-- [Case Study 8: Fresh Segments](#case-study-8-fresh-segments) -->
 
 ***
 ## Case Study 1: Danny's Diner 
-<img src="https://user-images.githubusercontent.com/81607668/127727503-9d9e7a25-93cb-4f95-8bd0-20b87cb4b459.png" alt="Image" width="500" height="520">
 
 [Here](https://8weeksqlchallenge.com/) is the **case study** information and [here](https://github.com/nancyshrestha04/8Weeks-SQL-Challenge/blob/main/Case%20Study%201-Danny's%20Diner/Answers.md) is my **solution**
+
+
+<img src="https://user-images.githubusercontent.com/81607668/127727503-9d9e7a25-93cb-4f95-8bd0-20b87cb4b459.png" alt="Image" width="400" height="420">
+
 
 ***
 
 ## Case Study 2: Pizza Runner
 
-<img src="https://user-images.githubusercontent.com/81607668/127271856-3c0d5b4a-baab-472c-9e24-3c1e3c3359b2.png" alt="Image" width="500" height="520">
-
 [Here](https://8weeksqlchallenge.com/case-study-2/) is the **case study** information and [here](https://github.com/nancyshrestha04/8Weeks-SQL-Challenge/tree/main/Case%20Study%202:%20Pizza%20Runner) is the **solution**.
+
+<img src="https://user-images.githubusercontent.com/81607668/127271856-3c0d5b4a-baab-472c-9e24-3c1e3c3359b2.png" alt="Image" width="400" height="420">
 
 ***
 
-## Case Study 3: Foodie-Fi
+<!-- ## Case Study 3: Foodie-Fi
 
 <img src="https://user-images.githubusercontent.com/81607668/129742132-8e13c136-adf2-49c4-9866-dec6be0d30f0.png" width="500" height="520" alt="image">
 
@@ -68,4 +71,4 @@ Here, you can find solutions for the case studies in **[8Weeks SQL Challenge](ht
 
 <img src="https://user-images.githubusercontent.com/81607668/138843936-d1741a39-9b87-4d5d-b09c-643600e28c92.png" alt="Image" width="500" height="520">
 
-[Here](https://8weeksqlchallenge.com/case-study-8/) is the case information and here is the solution.
+[Here](https://8weeksqlchallenge.com/case-study-8/) is the case information and here is the solution. -->
