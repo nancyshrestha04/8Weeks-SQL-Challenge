@@ -1,3 +1,0 @@
-# 🥓 🧀 🍄 Ingredient Optimisation
-## [Solution](#solution) 🗒️
-
