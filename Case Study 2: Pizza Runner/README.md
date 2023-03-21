@@ -9,7 +9,8 @@
 - [Case Study Questions](#case-study-questions)
   1. Pizza metrics
   2. Runner and Customer Experience
-  3. Ingredients and Optimization
+  3. Pricing and ratings
+  4. Bonus Question
 
 ***
 
@@ -57,7 +58,6 @@ This table contains all the ``topping_name`` values with their corresponding ``t
 The questions are divided as area of focus including:
 - [Pizza Metrics](#pizza-metrics)
 - [Runner and Customer Experience](#runner-and-customer-experience)
-- [Ingredient Optimisation](#ingredient-optimisation)
 - [Pricing and Ratings](#pricing-and-ratings)
 - [Bonus Question](#bonus-question)
 
@@ -86,20 +86,6 @@ The questions are divided as area of focus including:
 5.	What was the difference between the longest and shortest delivery times for all orders?
 6.	What was the average speed for each runner for each delivery and do you notice any trend for these values?
 7.	What is the successful delivery percentage for each runner?
-
-### Ingredient Optimisation
-
-1.	What are the standard ingredients for each pizza?
-2.	What was the most added extra?
-3.	What was the most common exclusion?
-4.	Generate an order item for each record in the customers_orders table in the format of one of the following:
-    *	Meat Lovers
-    *	Meat Lovers - Exclude Beef
-    *	Meat Lovers - Extra Bacon
-    *	Meat Lovers - Exclude Cheese, Bacon - Extra Mushroom, Peppers
-5.	Generate an alphabetically ordered comma separated ingredient list for each pizza order from the customer_orders table and add a 2x in front of any relevant ingredients.
-    *	For example: "Meat Lovers: 2xBacon, Beef, ..., Salami"
-6.	What is the total quantity of each ingredient used in all delivered pizzas sorted by most frequent first?
 
 ### Pricing and Ratings
 
