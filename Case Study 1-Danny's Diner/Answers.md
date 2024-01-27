@@ -3,14 +3,14 @@
 ## Solution
 * Tool used: PostgreSQL
 * Functions Used: 
-  * Aggregate Functions- SUM,COUNT
+  * Aggregate Functions- SUM, COUNT
   * Joins- INNER JOIN, LEFT JOIN, RIGHT JOIN
   * DATE Functions- DATE, DATE_TRUNC
   * Common Table Expressions (CTE)
 ***
 ### 1. What is the total amount each customer spent at the restaurant?
 
-````sql
+````SQL
 SELECT          s.customer_id, sum(m.price) as amount_spent
 From            sales as s 
 		 INNER JOIN menu as m 
@@ -19,7 +19,7 @@ GROUP BY        s.customer_id
 ORDER BY	s.customer_id;
 ````
 #### Steps:
-- Used SUM, GROUP BY and ORDER BY functions to fins the total amount spent by each customer.
+- Used SUM, GROUP BY, and ORDER BY functions to find the total amount spent by each customer.
 - Used INNER JOIN function to join **sales** and **menu** tables using _product_id_ as joining key.\
 
 #### ANSWER
@@ -37,7 +37,7 @@ ORDER BY	s.customer_id;
 ***
 2. How many days has each customer visited the restaurant?
 
-````sql
+````SQL
 SELECT           customer_id, count (distinct order_date) as  days_visited
 FROM 	         sales
 Group by         customer_id
@@ -45,7 +45,7 @@ ORDER BY         count (distinct order_date) desc;
 ````
 #### Steps
 - Used DISTINCT function wrapped with COUNT function to find the total number of days visited by each customer.
-- Used GROUP BY and ORDER BY functions as aggregate function to keep number of times visited in descending order.
+- Used GROUP BY and ORDER BY functions as aggregate function to keep the number of times visited in descending order.
 
 #### ANSWER
 
@@ -94,7 +94,7 @@ ORDER BY	s.order_date ASC, m.product_id ASC
 LIMIT		1;
 ````
 #### Steps
-Wrote separate querries for each customers using WHERE clause
+Wrote separate queries for each customer using WHERE clause
 
 #### Answer
 
@@ -141,7 +141,7 @@ LIMIT		  1;
 | ------------ | --------------- |
 | ramen        | 8               |
 
-- Most popular item on the menu is _ramen_.
+The most popular item on the menu is _ramen_.
 - It was purchased **8** times.
 ***
 5.  Which item was the most popular for each customer?
@@ -153,7 +153,7 @@ FROM 	           sales as s
 	            INNER JOIN menu as m  
 		     ON   s.product_id= m.product_id
 WHERE	           s.customer_id = 'A'
-GRoup by	   s.customer_id, m.product_name
+GROUP by	   s.customer_id, m.product_name
 order by	   3 DESC;
 
 -----By 'B'
@@ -177,7 +177,7 @@ GROUP BY	s.customer_id, m.product_name
 order By	3 DESC;
 ````
 #### Steps:
- Wrote separate querries for each customers using WHERE clause.
+ Wrote separate queries for each customer using WHERE clause.
 
 #### Answer:
  
@@ -197,8 +197,8 @@ order By	3 DESC;
 | ----------- | ------------ | --------------- |
 | C           | ramen        | 3               |
 
--	A and C’s most favourite item is _ramen_.
--	B likes all the items in the menu equally.
+-	A and C’s most favorite item is _ramen_.
+-	B likes all the items on the menu equally.
 ***
 6.  Which item was purchased first by the customer after they became a member?
 ````sql
@@ -271,7 +271,7 @@ ORDER BY	m1.customer_id, m1.order_date desc;
 - Customer A ordered _sushi_ and _curry_ just before becoming a member while Customer B ordered _sushi_.
 *** 
 
-8. What is the total items and amount spent for each member before they became a member?
+8. What is the total item and amount spent for each member before they became a member?
 ````sql
 SELECT		s.customer_id,  Count(m.product_name) as unique_items,
                 sum(m.price) as total_spent
@@ -295,7 +295,7 @@ order By	3 DESC;
 | B	      | 3	     | 40          | 
 | A           | 2            | 25          |
 
-- Customer A ordered 2 items from the menu and spent amount $25 in total whereas customer B spent $40 in total and ordered 3 items from the menu before they became a member.
+- Customer A ordered 2 items from the menu and spent an amount of $25 in total whereas customer B spent $40 in total and ordered 3 items from the menu before they became a member.
 *** 
 
 9. If each $1 spent equates to 10 points and sushi has a 2x points multiplier - how many points would each customer have?
@@ -317,7 +317,7 @@ ORDER BY	 1, 2 DESC;
 ````
 #### Steps
 
-- Created subquerries to use conditions for loyalty points.
+- Created subqueries to use conditions for loyalty points.
 
 #### Answer
 
@@ -333,7 +333,7 @@ ORDER BY	 1, 2 DESC;
 
 ***
 10. In the first week after a customer joins the program (including their join date) they earn 2x points on all items, not just sushi 
-- how many points do customer A and B have at the end of January?
+- how many points do customers A and B have at the end of January?
 ````sql
 WITH dates_cte AS 
 (
@@ -373,17 +373,17 @@ Order BY	          view1.customer_id, loyalty_points DESC;
 ````
 #### Steps
 
-- Divided the questions into 2 sections and made few assumptions
-  * As the first part of the question states that, a customer earns 2x points on all items, not just sushi, in the first week after becoming a member (including the join date). Hence, the valid date for earning the 2x points is 6 days. In order to set a valid date I used DATE function as DATE(join_date + integer ‘6’).
-  * The second part of the question asks how many points customer A and B have at the end of January. My approach to the question was by setting last date of the month and I used (date_trunc….. + interval ‘1 month – 1 day’ ):: date function.
+- Divided the questions into 2 sections and made a few assumptions
+  * As the first part of the question states, a customer earns 2x points on all items, not just sushi, in the first week after becoming a member (including the join date). Hence, the valid date for earning the 2x points is 6 days. To set a valid date I used the DATE function as DATE(join_date + integer ‘6’).
+  * The second part of the question asks how many points customers A and B have at the end of January. My approach to the question was by setting the last date of the month and I used (date_trunc….. + interval ‘1 month – 1 day’ ):: date function.
   * **Assumptions**:
     - The points are earned only after the customer joins the loyalty program.
-    - The customer earns 2x 10 points for each $1 spent on all the items in the menu between join date to valid date.
+    - The customer earns 2x 10 points for each $1 spent on all the items in the menu between the join date and the valid date.
     - After the valid date, the customer then earns 2x 10 points for each $1 spent for sushi and 1x 10 points for the rest.
  - Created CTE and used DATE and date_trunc to create columns called valid date and last date.
  - Added conditions in my query by using CASE WHEN function to calculate the loyalty points after the customer becomes a member. I used the WHERE clause to filter orders that were after January.
  - Used subquery and aggregate function like SUM to calculate the total points earned and ALIAS as loyalty points.
- - Used GROUP BY function to sort loyalty points based on customer id and ORDER BY function to keep the loyalty points in descending order.
+ - Used the GROUP BY function to sort loyalty points based on customer ID and the ORDER BY function to keep the loyalty points in descending order.
 
 #### Answer
 
